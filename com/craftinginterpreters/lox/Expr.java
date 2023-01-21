@@ -4,13 +4,13 @@ import java.util.List;
 
 abstract class Expr {
  static class Binary extends Expr {
-    Binary(Expr let, Token operator, Expr right) {
-        this.let = let;
+    Binary(Expr left, Token operator, Expr right) {
+        this.left = left;
         this.operator = operator;
         this.right = right;
     }
 
-    final Expr let;
+    final Expr left;
     final Token operator;
     final Expr right;
     }
